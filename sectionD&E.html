@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SectionD&E</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        header{
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 33px 9%;
+            background: transparent;
+        }
+        
+        
+        
+        
+        .logo{
+            width: 40px;
+            border-radius: 30px;
+        }
+        
+        .navlist{
+            display: flex;
+        
+        }
+        
+        .navlist a{
+            color: rgb(0, 0, 0);
+            margin-left: 60px;
+            font-size: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all .55s ease;
+        }
+        
+        #menu-icon{
+            color: white;
+            font-size: 35px;
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        
+        
+         
+        
+
+    
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 150vh;
+            width: 100%;
+            background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+             background-size:cover;
+                -webkit-animation: slidein 100s;
+                animation: slidein 100s;
+        
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+                background-repeat: no-repeat;
+                background-attachment: fixed; 
+
+        }
+
+
+        @-webkit-keyframes slidein {
+            from {background-position: top; background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+            }
+            
+        @keyframes slidein {
+            from {background-position: top;background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+            
+            }
+
+        .form-box{
+            position: relative;
+            width: 700px;
+            height: 800px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            padding: 20px; 
+        }
+
+        h1{
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            
+        }
+
+        .font-size {
+            font-size: 15px; 
+            line-height: 1.5; 
+            margin-bottom: 10px; 
+            color: aliceblue;
+        }
+
+        .form-box2{
+            position: relative;
+            width: 700px;
+            height: 500px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            padding: 20px;
+        }
+
+        
+
+        
+    
+        
+
+
+
+        
+        @media (max-width: 1195px){
+            #menu-icon{
+                display: block;
+            }
+            .navlist{
+                position: absolute;
+                top: 100%;
+                right:0;
+                width: 300px;
+                height: 40vh;
+                background: transparent;
+                border: 2px solid white;
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                padding: 50px 20px;
+                transition: all .55s ease;
+            }
+            .navlist a{
+                margin-left: 0;
+                display: block;
+                margin: 7px 0;
+            }
+            .navlist.open{
+                right:0;
+                display: flex;
+            }
+        }
+
+
+        @media (max-width: 790px) {
+            
+            .form-box{
+            
+                width: 650px;
+                height: 750px;
+                
+            }
+    
+            h1{
+                font-size: 1.75em;
+                
+                
+            }
+    
+            .font-size {
+                font-size: 15px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 650px;
+                height: 550px;
+                
+            }
+        }
+
+        @media (max-width: 700px) {
+            
+            .form-box{
+            
+                width: 600px;
+                height: 790px;
+                
+            }
+    
+            h1{
+                font-size: 1.75em;
+                
+                
+            }
+    
+            .font-size {
+                font-size: 15px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 600px;
+                height: 570px;
+                
+            }
+        
+        }
+
+
+        @media (max-width: 650px) {
+            
+            .form-box{
+            
+                width: 550px;
+                height: 670px;
+                
+            }
+    
+            h1{
+                font-size: 1.5em;
+                
+                
+            }
+    
+            .font-size {
+                font-size: 13px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 550px;
+                height: 500px;
+                
+            }
+            section{
+                
+                min-height: 120vh;
+            }
+        
+        }
+        
+        
+
+        @media (max-width: 610px) {
+            
+            .form-box{
+            
+                width: 500px;
+                height: 670px;
+                
+            }
+    
+
+    
+            .font-size {
+                font-size: 12px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 500px;
+                height: 500px;
+                
+            }
+            section{
+                
+                min-height: 120vh;
+            }
+        }
+
+        @media (max-width: 550px) {
+            
+            .form-box{
+            
+                width: 450px;
+                height: 700px;
+                
+            }
+    
+
+    
+            .font-size {
+                font-size: 12px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 450px;
+                height: 500px;
+                
+            }
+            section{
+                
+                min-height: 120vh;
+            }
+    
+        }
+
+        @media (max-width: 490px) {
+            
+            .form-box{
+            
+                width: 400px;
+                height: 670px;
+                
+            }
+    
+
+    
+            .font-size {
+                font-size: 11px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 400px;
+                height: 470px;
+                
+            }
+            section{
+                
+                min-height: 120vh;
+            }
+    
+        }
+
+        @media (max-width: 440px) {
+            
+            .form-box{
+            
+                width: 350px;
+                height: 650px;
+                
+            }
+    
+
+    
+            .font-size {
+                font-size: 10px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 350px;
+                height: 450px;
+                
+            }
+            section{
+                
+                min-height: 120vh;
+            }
+    
+        }
+
+        @media (max-width: 390px) {
+            
+            .form-box{
+            
+                width: 300px;
+                height: 600px;
+                
+            }
+    
+
+    
+            .font-size {
+                font-size: 9px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 300px;
+                height: 400px;
+                
+            }
+            section{
+                
+                min-height: 110vh;
+            }
+    
+        }
+
+
+        @media (max-width: 340px) {
+            
+            .form-box{
+            
+                width: 250px;
+                height: 570px;
+                
+            }
+    
+
+    
+            .font-size {
+                font-size: 8px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 250px;
+                height: 400px;
+                
+            }
+            section{
+                
+                min-height: 100vh;
+            }
+    
+        }
+
+        @media (max-width: 290px) {
+            
+            .form-box{
+            
+                width: 200px;
+                height: 570px;
+                
+            }
+    
+
+    
+            .font-size {
+                font-size: 7px; 
+                
+            }
+    
+            .form-box2{
+                
+                width: 200px;
+                height: 400px;
+                
+            }
+            section{
+                
+                min-height: 100vh;
+            }
+    
+        }
+         
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"  ><img class="logo" src="AreebPic.jpeg" alt=""></a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="section1.html">SectionA</a> </li>
+            <li><a href="sectionB.html">SectionB</a> </li>
+            <li><a href="sectionC.html">SectionC</a> </li>
+            <li><a href="sectionD&E.html">SectionD&E</a> </li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section>
+        <div class="form-box">
+            <div class="font-size">
+                <h1>Responsive Design Techniques Used</h1>
+                <ul>
+                    <li>
+                        <h3>I Used CSS Media Queries:</h3>
+                        <p>This allowed me to apply different styles based on the screen size or device. For example, on smaller screens like mobiles, I made sure the content and layout adjust to fit better.</p>
+                    </li>
+                    <li>
+                        <h3>I Used Relative Font Sizes:</h3>
+                        <p>To ensure text remains readable on all screens, I used relative units like <code>em</code> and <code>rem</code> for font sizes. This means that text scales appropriately as the screen size changes.</p>
+                    </li>
+                    <li>
+                        <h3>I Employed Fluid Layouts:</h3>
+                        <p>For the overall layout, I used percentage-based widths for containers and elements. This makes sure that everything adapts smoothly to different screen sizes.</p>
+                    </li>
+                    <li>
+                        <h3>I Considered Flexbox and Grid Layouts:</h3>
+                        <p>These are modern CSS layout techniques that help in arranging elements more flexibly. They're especially handy for creating responsive designs.</p>
+                    </li>
+                    <li>
+                        <h3>I Followed a Mobile-First Approach:</h3>
+                        <p>I started designing for mobile screens first and then used media queries to enhance the design for larger screens like tablets and desktops. This approach ensures a good user experience on mobile devices.</p>
+                    </li>
+                    <li>
+                        <h3>I Managed Content for Different Screens:</h3>
+                        <p>To keep the user interface clean and user-friendly, I decided to hide or reorganize less important content on smaller screens. This way, users see what's most relevant to them.</p>
+                    </li>
+                    <li>
+                        <h3>I Tested Responsiveness:</h3>
+                        <p>I used browser developer tools to check how my webpage looks and functions on various screen sizes. Additionally, I tested it on real mobile devices and tablets to make sure it works well everywhere.</p>
+                    </li>
+                    <li>
+                        <h3>I Considered Responsive Frameworks:</h3>
+                        <p>Although I didn't use one in this project, I thought about using CSS frameworks like Bootstrap or Foundation. These frameworks provide pre-built responsive components and grids, which can be very helpful in saving time and ensuring responsiveness.</p>
+                    </li>
+                </ul>
+                    
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="form-box2">
+            <div class="font-size">
+                <h1>Enhancements to Improve User Experience</h1>
+    <h3>Menu Icon Animation:</h3>
+    <p>
+        Created a menu icon that transforms into an "X" shape when clicked, and vice versa. This effect is achieved by toggling a CSS class using JavaScript.
+        Additionally, the navigation list opens and closes when the menu icon is clicked, providing a seamless navigation experience.
+    </p>
+
+    <h3>ScrollReveal Animations:</h3>
+    <p>
+        Integrated the ScrollReveal library to introduce scroll-based animations. These animations are applied to specific elements as they enter the viewport.
+        Customized animation properties such as distance, duration, and delay were used for a visually appealing effect. For example, the `hero-text` and `hero-img`
+        elements have top-to-bottom reveal animations, while the `form-box` element enters with a bottom-to-top animation.
+    </p>
+
+    <h3>Enhanced User Experience:</h3>
+    <p>
+        The animations contribute to an engaging and dynamic user experience. Content is highlighted as it comes into view, improving user engagement.
+        The design is visually attractive and user-friendly.
+    </p>
+
+    <h3>Responsive Design:</h3>
+    <p>
+        Ensured animations function smoothly on both desktop and mobile devices. Responsive design considerations make animations work seamlessly across
+        different screen sizes.
+    </p>
+
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

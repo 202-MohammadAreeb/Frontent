@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        header{
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 33px 9%;
+            background: transparent;
+        }
+        
+        
+        
+        
+        .logo{
+            width: 40px;
+            border-radius: 30px;
+        }
+        
+        .navlist{
+            display: flex;
+        
+        }
+        
+        .navlist a{
+            color: rgb(0, 0, 0);
+            margin-left: 60px;
+            font-size: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all .55s ease;
+        }
+        
+        #menu-icon{
+            color: white;
+            font-size: 35px;
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        
+        
+         
+        
+
+    
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+             background-size:cover;
+                -webkit-animation: slidein 100s;
+                animation: slidein 100s;
+        
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate; 
+
+        }
+
+
+        @-webkit-keyframes slidein {
+            from {background-position: top; background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+            }
+            
+        @keyframes slidein {
+            from {background-position: top;background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+            
+            }
+
+        .form-box{
+            position: relative;
+            width: 500px;
+            height: 550px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+        }
+
+        h2{
+            font-size: 2em;
+            color: white;
+            text-align: center;
+        }
+
+
+
+        .img {
+            max-width: 300px;
+            max-height: 250px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .fnt{
+            font-size: 11px; 
+            line-height: 1.5; 
+            margin-bottom: 10px; 
+            color: aliceblue;
+        }
+        
+
+
+
+        
+        @media (max-width: 1195px){
+            #menu-icon{
+                display: block;
+            }
+            .navlist{
+                position: absolute;
+                top: 100%;
+                right:0;
+                width: 300px;
+                height: 40vh;
+                background: transparent;
+                border: 2px solid white;
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                padding: 50px 20px;
+                transition: all .55s ease;
+            }
+            .navlist a{
+                margin-left: 0;
+                display: block;
+                margin: 7px 0;
+            }
+            .navlist.open{
+                right:0;
+                display: flex;
+            }
+        }
+
+
+
+        @media (max-width: 610px) {
+            
+            .form-box{
+                width: 450px;
+                height: 500px;
+            }
+        
+            h2{
+                font-size: 1.75em;
+            }
+    
+            .img {
+                max-width: 250px;
+                max-height: 200px;
+
+            }
+    
+  
+        }
+
+        @media (max-width: 530px) {
+            
+            .form-box{
+                width: 400px;
+                height: 500px;
+            }
+        
+        }
+
+
+        @media (max-width: 470px) {
+            
+            .form-box{
+                width: 350px;
+                height: 500px;
+            }
+        
+        }
+
+        @media (max-width: 400px) {
+            
+            .form-box{
+                width: 300px;
+                height: 500px;
+            }
+        
+  
+    
+        }
+
+        @media (max-width: 350px) {
+            
+            .form-box{
+                width: 250px;
+                height: 500px;
+            }
+            h2{
+                font-size: 1.5em;
+            }
+    
+            .img {
+                max-width: 200px;
+                max-height: 175px;
+
+            }
+
+            .fnt{
+                font-size: 10px; 
+                
+            }
+
+            
+  
+    
+        }
+
+
+        @media (max-width: 280px) {
+            
+            .form-box{
+                width: 225px;
+                height: 450px;
+            }
+            h2{
+                font-size: 1.25em;
+            }
+    
+            .img {
+                max-width: 175px;
+                max-height: 150px;
+
+            }
+
+            .fnt{
+                font-size: 9px; 
+                
+            }
+
+            
+  
+    
+        }
+         
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"  ><img class="logo" src="D:\areebInfo\pic.jpeg" alt=""></a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="section1.html">SectionA</a> </li>
+            <li><a href="sectionB.html">SectionB</a> </li>
+            <li><a href="sectionC.html">SectionC</a> </li>
+            <li><a href="sectionD&E.html">SectionD&E</a> </li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+
+    <section>
+        <div class="form-box">
+            <div class="img">
+                <img src="https://raw.githubusercontent.com/202-MohammadAreeb/PollutionAwareness/main/mohammadAreebpic.jpg" alt="Jane" style="width:100%">
+        
+                <h2>Mohammad Areeb</h2>
+                    
+                        <p class="fnt">I'm a recent graduate with a strong foundation in Microsoft Azure, Python, and Django, fortified by a valuable
+                            internship at Microsoft. My hands-on experience has deepened my commitment to the IT field, and my enthusiasm for
+                            emerging technologies drives my continuous learning. I thrive in dynamic environments, and my collaborative and
+                            problem-solving skills were honed through leadership roles in prestigious hackathons such as the Smart India Hackathon.
+                            I've also excelled individually in the Microsoft Imagine Cup, showcasing my technical prowess and determination.</p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="D:\Frontend\script.js"></script>
+    
+</body>
+</html>

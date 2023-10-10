@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>SectionB</title>
+
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        header{
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 33px 9%;
+            background: transparent;
+        }
+        
+        
+        
+        
+        .logo{
+            width: 40px;
+            border-radius: 30px;
+        }
+        
+        .navlist{
+            display: flex;
+        
+        }
+        
+        .navlist a{
+            color: rgb(0, 0, 0);
+            margin-left: 60px;
+            font-size: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all .55s ease;
+        }
+        
+        .navlist a:hover{
+            border-bottom: 2px solid white;
+        }
+        
+        #menu-icon{
+            color: white;
+            font-size: 35px;
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        
+        
+         
+        body{
+            background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+             background-size:cover;
+                -webkit-animation: slidein 100s;
+                animation: slidein 100s;
+        
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate; 
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+
+        }
+
+
+        @-webkit-keyframes slidein {
+            from {background-position: top; background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+            }
+            
+        @keyframes slidein {
+            from {background-position: top;background-size:3000px; }
+            to {background-position: -100px 0px;background-size:2750px;}
+            
+        }
+
+    
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 110vh;
+            width: 100%;
+            
+            }
+
+        .form-box{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2{
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .textcolor{
+            color: white;
+            
+        }
+
+        button{
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .space{
+            margin: 0 5px;
+        }
+        .btn{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        @media (max-width: 1195px){
+            #menu-icon{
+                display: block;
+            }
+            .navlist{
+                position: absolute;
+                top: 100%;
+                right:0;
+                width: 300px;
+                height: 40vh;
+                background: transparent;
+                border: 2px solid white;
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                padding: 50px 20px;
+                transition: all .55s ease;
+            }
+            .navlist a{
+                margin-left: 0;
+                display: block;
+                margin: 7px 0;
+            }
+            .navlist.open{
+                right:0;
+                display: flex;
+            }
+        }
+
+
+        @media (max-width: 610px) {
+            
+            .form-box{
+                width: 450px;
+               
+            }
+        
+            h2{
+                font-size: 1.75em;
+            }
+    
+    
+            button{
+                font-size: 0.75em;
+                font-weight: 550;
+            }
+        }
+
+        @media (max-width: 530px) {
+            
+            .form-box{
+                width: 400px;
+                
+            }
+            h2{
+                font-size: 1.50em;
+            }
+        
+        }
+
+
+        @media (max-width: 470px) {
+            
+            .form-box{
+                width: 350px;
+                
+            }
+            h2{
+                font-size: 1.25em;
+            }
+        
+        }
+
+        @media (max-width: 400px) {
+            
+            .form-box{
+                width: 300px;
+            }
+            h2{
+                font-size: 1em;
+            }
+        
+    
+        }
+
+        @media (max-width: 340px) {
+            
+            .form-box{
+                width: 250px;
+            }
+            h2{
+                font-size: 0.75em;
+            }
+        
+            
+    
+        }
+
+        
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <a href="index.html"  ><img class="logo" src="AreebPic.jpeg" alt=""></a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="section1.html">SectionA</a> </li>
+            <li><a href="sectionB.html">SectionB</a> </li>
+            <li><a href="sectionC.html">SectionC</a> </li>
+            <li><a href="sectionD&E.html">SectionD&E</a> </li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+
+    <section>
+        <div class="form-box">
+            <div >
+                <h2>Even or Odd Checker</h2>
+                    <div class="textcolor">
+                        <label for="numberInput">Enter an integer:</label>
+                        <input type="number" id="numberInput">
+                        <button onclick="checkEvenOrOdd()">Check</button>
+                        <p id="result"></p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="form-box">
+            <div >
+                <h2>Number Guessing Game</h2>
+                    <div class="textcolor">
+                        <label for="numberInput">Guess a number between 1 and 10</label>
+                        <input type="number" id="guessInput">
+                        <button onclick="checkGuess()">Guess</button>
+                        <p id="message"></p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="form-box">
+            <div>
+                <h2>Favorite Fruits List</h2>
+                <div class="textcolor">
+                    <label for="fruitInput">Enter a fruit:</label>
+                    <input type="text" id="fruitInput">
+                    <div class="btn">
+                    <button class="space" onclick="addFruit()">Add Fruit</button>
+                    <button class="space" onclick="displayFruitsList()">Show </button>
+                </div>
+                    <ul id="fruitsList"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function checkEvenOrOdd() {
+            // Get the user's input
+            var userInput = parseInt(document.getElementById("numberInput").value);
+
+            // Check if the input is a valid integer
+            if (isNaN(userInput)) {
+                document.getElementById("result").innerHTML = "Please enter a valid integer.";
+                return;
+            }
+
+            // Check if the input is even or odd
+            if (userInput % 2 === 0) {
+                document.getElementById("result").innerHTML = userInput + " is even.";
+            } else {
+                document.getElementById("result").innerHTML = userInput + " is odd.";
+            }
+        }
+
+
+
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        let numberOfGuesses = 0;
+        const maxGuesses = 3;
+
+        function checkGuess() {
+            const guess = parseInt(document.getElementById("guessInput").value);
+            const messageElement = document.getElementById("message");
+
+            if (isNaN(guess) || guess < 1 || guess > 10) {
+                messageElement.textContent = "Please enter a valid number between 1 and 10.";
+                return;
+            }
+
+            numberOfGuesses++;
+
+            if (guess === randomNumber) {
+                messageElement.textContent = "Congratulations! You guessed the correct number.";
+                disableInputAndButton();
+            } else if (numberOfGuesses === maxGuesses) {
+                messageElement.textContent = `Sorry, you've reached the maximum number of guesses. The correct number was ${randomNumber}.`;
+                disableInputAndButton();
+            } else {
+                const hint = guess < randomNumber ? "too low" : "too high";
+                messageElement.textContent = `Try again! Your guess is ${hint}. You have ${maxGuesses - numberOfGuesses} guesses left.`;
+            }
+        }
+
+        function disableInputAndButton() {
+            document.getElementById("guessInput").disabled = true;
+            document.querySelector("button").disabled = true;
+        }
+
+
+
+
+     // Initialize an empty array for favorite fruits
+const favoriteFruits = [];
+
+function addFruit() {
+    const fruitInput = document.getElementById("fruitInput");
+    const fruitName = fruitInput.value.trim();
+
+    if (fruitName !== "") {
+        favoriteFruits.push(fruitName);
+        fruitInput.value = ""; // Clear the input field
+    }
+}
+
+function displayFruitsList() {
+    const fruitsList = document.getElementById("fruitsList");
+
+    // Clear any existing list items
+    fruitsList.innerHTML = "";
+
+    // Create list items for each favorite fruit and add them to the unordered list
+    for (let i = 0; i < favoriteFruits.length; i++) {
+        const fruitItem = document.createElement("li");
+        fruitItem.textContent = favoriteFruits[i];
+        fruitsList.appendChild(fruitItem);
+    }
+}
+
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
